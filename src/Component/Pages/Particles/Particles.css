@@ -18,3 +18,8 @@
     width: 100%;
     text-align: center;
 } */
+
+#tsparticles{
+    height: 552px;
+    position: static;
+}

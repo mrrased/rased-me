@@ -5,8 +5,8 @@ import './Contact.module.css';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import MessageForm from './MessageForm';
 import { Typography } from '@mui/material';
+import ContactForm from './ContactForm/ContactForm';
 
 // const Item = styled(Paper)(({ theme }) => ({
 //     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -45,10 +45,10 @@ const Contact = () => {
             </div>
             <div style={{marginTop: '90px'}}>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid container rowSpacing={2} spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     
                     <Grid item xs={6} sm={6} md={6}>
-                        <MessageForm />
+                        <ContactForm />
                     </Grid>
                     <Grid item xs={6} sm={6} md={6}>
                         <h3 style={{
@@ -71,7 +71,7 @@ const Contact = () => {
                         </div>
 
 
-                        <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
+                        <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
                                         <div style={{
                                             color: '#a9adb8',

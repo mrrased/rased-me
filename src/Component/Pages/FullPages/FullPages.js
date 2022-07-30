@@ -14,8 +14,8 @@ import img from '../../../images/logo.png';
 import { Button, IconButton, ListItemIcon } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import About from '../About/About';
-import ParticlesTop from '../Particles/ParticlesTop';
 import Contact from '../Contact/Contact';
+import Blog from '../Blog/Blog';
 
 
 const drawerWidth = 282;
@@ -165,6 +165,7 @@ const FullPages = (props) => {
                     {/* <Toolbar sx={{paddingBottom: '0px'}} /> */}
                     
                     <About />
+                    <Blog />
                     <Contact />
                 </Box>
             </Box>
