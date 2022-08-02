@@ -119,7 +119,7 @@ const About = () => {
                                         </div>
                                     </Grid>
                                 </Grid>
-                                <Button sx={{
+                                <a style={{textDecoration: 'none'}} href="https://docs.google.com/document/d/19hgLgPYYYKBmQSbtWG9V4-Hfgtv51zdbut_4SO0o2A8/edit?usp=sharing" target="_blank" rel="noreferrer"> <Button sx={{
                                     color: '#FEC544',
                                     fontSize: '16px',
                                     paddingTop: '12px',
@@ -136,7 +136,7 @@ const About = () => {
                                         backgroundColor: '#FEC544',
                                         color: '#070D18',
                                     }
-                                }}>Download CV</Button>
+                                }}>Download CV</Button></a>
                             </Grid>
                     </Grid>
                 </Box>

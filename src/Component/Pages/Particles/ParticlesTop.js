@@ -61,7 +61,7 @@ const ParticlesTop = () => {
                         >I also make website more & more interactive with web animation.</p>
                     <div>
                         <p>
-                            <span><GitHubIcon 
+                            <span><a href="https://github.com/mrrased/" target="_blank" rel="noreferrer"><GitHubIcon 
                                 sx={{
                                     border: '1px solid #202632',
                                     borderRadius: '50%',
@@ -71,8 +71,8 @@ const ParticlesTop = () => {
                                     color: '#a4a8b4',
                                     ':hover':{border: '2px solid white', cursor: 'pointer'}
                                     }} 
-                                    /></span> 
-                            <span><LinkedInIcon 
+                                    /></a></span> 
+                            <span><a href="https://www.linkedin.com/in/rashedur-rahman-rony-4b72b8217/" target="_blank" rel="noreferrer"><LinkedInIcon 
                                 sx={{
                                     border: '1px solid #202632',
                                     borderRadius: '50%',
@@ -82,8 +82,8 @@ const ParticlesTop = () => {
                                     color: '#a4a8b4',
                                     ':hover':{border: '2px solid white', cursor: 'pointer' }
                                     }} 
-                                /></span> 
-                            <span><FacebookRoundedIcon 
+                                /></a></span> 
+                            <span><a href="https://www.facebook.com/rased.hd/" target="_blank" rel="noreferrer" ><FacebookRoundedIcon 
                                 sx={{
                                     border: '1px solid #202632',
                                     borderRadius: '50%',
@@ -93,7 +93,7 @@ const ParticlesTop = () => {
                                     color: '#a4a8b4',
                                     ':hover':{border: '2px solid white', cursor: 'pointer'}
                                     }} 
-                          /></span></p>
+                          /></a></span></p>
                     </div>
                 </div>
           </div>

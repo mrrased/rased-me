@@ -107,6 +107,7 @@ const FullPages = (props) => {
           
       </List>
       <Box sx={{textAlign: 'center'}}>
+        <a style={{textDecoration: 'none'}} href="https://mail.google.com/" target="_blank" rel="noreferrer" >
       <Button 
         sx={{
             paddingLeft: '40px', 
@@ -121,7 +122,7 @@ const FullPages = (props) => {
             marginTop: '22px',
             ':hover':{backgroundColor: '#fec544', color: 'black'}
         }}
-        >Hire Me</Button>
+        >Hire Me</Button></a>
         </Box>
     </div>
   );
