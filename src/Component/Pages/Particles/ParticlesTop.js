@@ -4,26 +4,26 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import './Particles.css';
 // import ParticlesBackground from '../../../Config/ParticlesBackground';
-import Particles  from "react-tsparticles";
-import { loadFull } from "tsparticles";
+// import Particles  from "react-tsparticles";
+// import { loadFull } from "tsparticles";
 
 const ParticlesTop = () => {
 
-    const particlesInit = async (main) => {
-        console.log(main);
+    // const particlesInit = async (main) => {
+    //     console.log(main);
     
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-    };
+    //     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    //     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    //     // starting from v2 you can add only the features you need reducing the bundle size
+    //     await loadFull(main);
+    // };
     
-    const particlesLoaded = (container) => {
-    console.log(container);
-    };
+    // const particlesLoaded = (container) => {
+    // console.log(container);
+    // };
 
     return (
-        <div className='bg-img'>
+        <div className='bg-img' id="home">
           
           <div className='position-banner'>
                 <div style={{textAlign: 'center' }}>
@@ -97,7 +97,7 @@ const ParticlesTop = () => {
                     </div>
                 </div>
           </div>
-            <div>
+            {/* <div>
           <Particles
             
             id="tsparticles"
@@ -223,7 +223,7 @@ const ParticlesTop = () => {
               detectRetina: true,
               }}
           />
-          </div>
+          </div> */}
         </div>
         
     );

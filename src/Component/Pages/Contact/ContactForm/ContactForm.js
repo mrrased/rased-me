@@ -1,17 +1,29 @@
 import { Button } from '@mui/material';
 import React from 'react';
 import './ContactForm.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const ContactForm = () => {
+
+    useEffect(()=>{
+        AOS.init({duration: 1000})
+    },[]);
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        alert('Your Message Send Successful');
+    }
     return (
         <div>
-            <div>
-            <form action=''>
+            <div data-aos="fade-down-right">
+            <form action='' onSubmit={handleSubmit}>
                 <h1 className='header-design'>Just Say Hello</h1>
-                <input type="name" name=""  placeholder='Your Name' className='form-design'/><br /><br />
-                <input type="email" name=""  placeholder='Your Email' className='form-design'/><br /><br />
-                <input type="text" name="" placeholder='Your Subject' className='form-design'/><br /><br />
-                <textarea rows="8" className='form-wrapper' placeholder='Your Message' />
+                <input type="name" name=""  placeholder='Your Name' className='form-design' required /><br /><br />
+                <input type="email" name=""  placeholder='Your Email' className='form-design' required/><br /><br />
+                <input type="text" name="" placeholder='Your Subject' className='form-design'required /><br /><br />
+                <textarea rows="8" className='form-wrapper' placeholder='Your Message' required />
                 <Button 
                 sx={{
                     border: '1px solid #fec544',
@@ -35,6 +47,7 @@ const ContactForm = () => {
                         color: '#070d1b'
                     }
                 }}
+                type="submit"
                 >Send Message</Button>
             </form>
             </div>

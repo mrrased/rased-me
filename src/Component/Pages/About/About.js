@@ -1,23 +1,30 @@
 import React from 'react';
 import './About.css';
-import { experimentalStyled as styled } from '@mui/material/styles';
+import 'aos/dist/aos.css';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button } from '@mui/material';
+import AOS from 'aos';
+import { useEffect } from 'react';
+import img from '../../../images/49175748_1981162115511152_3338332277926002688_n.jpg'
 
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+// const Item = styled(Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(2),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   }));
 
 const About = () => {
+
+    useEffect(()=>{
+        AOS.init({duration: 1000})
+    },[])
+
     return (
-        <div style={{backgroundColor: '#0a1012', paddingTop: '100px', paddingBottom: '100px', display: 'block'}}>
+        <div style={{backgroundColor: '#0a1012', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '20px', paddingRight: '20px'}} id="about" >
             <div className='about-bg'>
                 <h2 style={{
                     color: '#151B2980',
@@ -45,11 +52,11 @@ const About = () => {
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         
-                            <Grid item xs={12} sm={12} md={6}>
-                                <Item>xs=2</Item>
+                            <Grid item xs={12} sm={12} md={6} data-aos="fade-down-right">
+                                <img style={{width: '100%', height: '100%'}} src={img} alt="" />
                             </Grid>
 
-                            <Grid item xs={12} sm={12} md={6}>
+                            <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
                                 <h2 style={{
                                     color: '#fdfeff',
                                     fontSize: '36px',
@@ -105,7 +112,7 @@ const About = () => {
                                             marginBottom: '18px',
                                         }}>
                                             <p>: Oct 27, 1996</p>
-                                            <p>: +880=1732=920=164</p>
+                                            <p>: +880-1732-920-164</p>
                                             <p>: rashedtechdr.786@gmai.com</p>
                                             <p>: Mohanogor Residential Area, Wapda Road, Rampura</p>
                                             <p>: Bangla, English, Hindi</p>

@@ -7,8 +7,6 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import img from '../../../images/logo.png';
 import { Button, IconButton, ListItemIcon } from '@mui/material';
@@ -16,11 +14,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Blog from '../Blog/Blog';
-
+import Footer from '../Footer/Footer';
+import ParticlesTop from '../Particles/ParticlesTop';
+import { Link } from 'react-scroll';
+import './FullPages.css';
 
 const drawerWidth = 282;
 
 const FullPages = (props) => {
+
+    // let activeStyle = {
+        
+    //     borderBottom: '4px solid crimson',
+    //     color: 'crimson',
+    //     fontWeight: 'bold'
+    // };
 
     const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -28,27 +36,28 @@ const FullPages = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-     const itemsList = [
-        {
-            text: "Home",
+    //  const itemsList = [
+    //     {
+    //         text: "Home",
+    //         onClick:  () => console.log(<Link to='about'>working</Link>)
 
-        },
-        {
-            text: "About"
-        },
-        {
-            text: "Resume"
-        },
-        {
-            text: "Portfolio"
-        },
-        {
-            text: "Blog"
-        },
-        {
-            text: "Contact"
-        }
-     ]
+    //     },
+    //     {
+    //         text: "About"
+    //     },
+    //     {
+    //         text: "Resume"
+    //     },
+    //     {
+    //         text: "Portfolio"
+    //     },
+    //     {
+    //         text: "Blog"
+    //     },
+    //     {
+    //         text: "Contact"
+    //     }
+    //  ]
   const drawer = (
     <div style={{backgroundColor: '#070d1b', color: '#fdfeff', paddingBottom: '80px'}}>
       <Toolbar />
@@ -59,23 +68,43 @@ const FullPages = (props) => {
         </Box>
       <Divider />
       <List>
-        {itemsList.map((text, index) => (
-          <ListItem key={text.text} disablePadding>
-            <ListItemButton>
+      
+          <ListItem disablePadding>
+            {/* <ListItemButton> */}
               <ListItemIcon>
                 {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
               </ListItemIcon>
-              <ListItemText primary={text.text} sx={{
+              {/* <ListItemText 
+              primary={text.text} 
+                    sx={{
                     marginTop: '0px', 
                     marginBottom: '0px', 
                     fontSize: '15px', 
                     fontWeight: 500,
                     textTransform: 'uppercase'
                 }} 
-                />
-            </ListItemButton>
+                /> */}
+                {/* <Link to="/home" spy={true} smooth={true} offset={50} duration={500} style={{marginTop: '0px', 
+                    marginBottom: '0px', 
+                    fontSize: '15px', 
+                    fontWeight: 500,
+                    textTransform: 'uppercase'}}>Home</Link> */}
+                    <ul style={{listStyleType: 'none'}} >
+                        <li className='li-st active'><Link 
+                        to="home" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={50} 
+                        duration={700}
+                        >Home</Link></li>
+                        <li className='li-st'><Link to="about" spy={true} smooth={true} offset={50} duration={700} >About</Link></li>
+                        <li className='li-st'><Link to="blog" spy={true} smooth={true} offset={50} duration={700} >Blog</Link></li>
+                        <li className='li-st'><Link to="contact" spy={true} smooth={true} offset={50} duration={700} >Contact</Link></li>
+                    </ul>
+                    
+            {/* </ListItemButton> */}
           </ListItem>
-        ))}
+          
       </List>
       <Box sx={{textAlign: 'center'}}>
       <Button 
@@ -111,8 +140,9 @@ const FullPages = (props) => {
                     boxShadow: 'none'
                     }}
                 >
-                    <Toolbar style={{backgroundColor: '#070d1b'}}>
+                    <Toolbar style={{backgroundColor: '#070d1b', position: 'static'}}>
                     <IconButton
+                        
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
@@ -160,13 +190,14 @@ const FullPages = (props) => {
                 </Box>
                 <Box
                     component="main"
-                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } , paddingLeft: '1px', paddingRight: '1px', paddingTop: '50px'}}
+                    sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } , paddingTop: '50px', paddingBottom: '0px'}}
                 >
                     {/* <Toolbar sx={{paddingBottom: '0px'}} /> */}
-                    
+                    <ParticlesTop />
                     <About />
                     <Blog />
                     <Contact />
+                    <Footer />
                 </Box>
             </Box>
         </div>

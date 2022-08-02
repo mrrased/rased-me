@@ -7,6 +7,9 @@ import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Typography } from '@mui/material';
 import ContactForm from './ContactForm/ContactForm';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 // const Item = styled(Paper)(({ theme }) => ({
 //     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,8 +20,13 @@ import ContactForm from './ContactForm/ContactForm';
 //   }));
 
 const Contact = () => {
+
+    useEffect(()=>{
+        AOS.init({duration: 1000})
+    },[])
+
     return (
-        <div style={{backgroundColor: '#0a101e', paddingTop: '100px', paddingBottom: '100px'}}>
+        <div style={{backgroundColor: '#0a101e', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '20px', paddingRight: '20px'}} id="contact">
 
             <div className='about-bg'>
                 <h2 style={{
@@ -45,12 +53,12 @@ const Contact = () => {
             </div>
             <div style={{marginTop: '90px'}}>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container rowSpacing={2} spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid container  spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 12, md: 12 }}>
                     
-                    <Grid item xs={6} sm={6} md={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                         <ContactForm />
                     </Grid>
-                    <Grid item xs={6} sm={6} md={6}>
+                    <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
                         <h3 style={{
                             color: '#FDFEFF',
                             fontSize: '30px',
@@ -71,7 +79,7 @@ const Contact = () => {
                         </div>
 
 
-                        <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
+                        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
                                         <div style={{
                                             color: '#a9adb8',

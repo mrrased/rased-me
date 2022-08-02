@@ -2,7 +2,7 @@
     background-color: #101624;
     padding: 12px 20px;
     width: 100%;
-    /* color: #3f4551; */
+    color: #a9adb8;
     height: 52px;
     border-radius: 7px;
     transition: all .7s;
@@ -38,6 +38,7 @@
     padding: 12px 20px;
     transition: all .7s;
     font-size: 18px;
+    color: #a9adb8;
 }
 
 .form-wrapper:focus{
