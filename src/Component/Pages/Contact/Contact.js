@@ -79,7 +79,7 @@ const Contact = () => {
                         </div>
 
 
-                        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                        <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 12, sm:12, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
                                         <div style={{
                                             color: '#a9adb8',
@@ -147,6 +147,7 @@ const Contact = () => {
                                             fontWeight: 400,
                                             marginBottom: '18px',
                                             transition: '.6s',
+                                            marginTop: '16px',
                                             ':hover':{
                                                 color: '#FEC544',
                                                 cursor: 'pointer'
