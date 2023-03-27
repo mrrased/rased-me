@@ -152,17 +152,13 @@ const FullPages = (props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    {/* <Typography variant="h6" noWrap component="div">
-                        Responsive drawer
-                    </Typography> */}
-                    </Toolbar>
+                     </Toolbar> 
                 </AppBar>
                 <Box
                     component="nav"
                     sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                     aria-label="mailbox folders"
                 >
-                    {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                     <Drawer
                     container={container}
                     variant="temporary"
@@ -198,7 +194,7 @@ const FullPages = (props) => {
                     <About />
                     <Blog />
                     <Contact />
-                    <Footer />
+                    {/* <Footer /> */}
                 </Box>
             </Box>
         </div>

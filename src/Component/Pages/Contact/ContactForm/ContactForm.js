@@ -17,7 +17,7 @@ const ContactForm = () => {
     }
     return (
         <div>
-            <div data-aos="fade-down-right">
+            <div data-aos="zoom-in">
             <form action='' onSubmit={handleSubmit}>
                 <h1 className='header-design'>Just Say Hello</h1>
                 <input type="name" name=""  placeholder='Your Name' className='form-design' required /><br /><br />

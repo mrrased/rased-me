@@ -29,40 +29,23 @@ const Blog = () => {
     return (
         <div style={{backgroundColor: '#0a1012', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '20px', paddingRight: '20px'}} id="blog">
             <div className='blog-bg'>
-                <h2 style={{
-                    color: '#151B2980',
-                    fontSize: '90px',
-                    textTransform: 'uppercase',
-                    marginTop: '0px',
-                    textAlign: 'center',
-
-                    }}
-                >Demo View</h2>
-                
+                <h2 className='text-[#151B2980] text-8xl uppercase mt-0 text-center'>Demo View</h2>
             </div>
             <div>
-                <h4 className='blog-h4' style={{
-                    fontSize: '24px',
-                    fontWeight: 500,
-                    textTransform: 'uppercase',
-                    color: '#fec544',
-                    letterSpacing: '1px',
-                    marginTop: '-180px',
-                    textAlign: 'center'
-                }}>Demo View</h4>
+                <h4 className='text-[#fec544] text-2xl uppercase font-medium -mt-[11.25rem] text-center blog-h4'>Demo View</h4>
             </div>
             <div style={{marginTop: '130px'}}>
                 <Box sx={{ flexGrow: 1 }}>
                     
                         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                             
-                            <Grid item xs={12} sm={12} md={6}  data-aos="fade-down-right" sx={{marginBottom: '40px'}}>
+                            <Grid item xs={12} sm={12} md={6}  data-aos="flip-down" sx={{marginBottom: '40px'}}>
                                 <Box sx={{textAlign: 'center', paddingTop: '40px'}}>
                                 <img style={{height: '200px', width: '350px'}} src={img} alt="" />
                                 </Box>
                             </Grid>
                             
-                            <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
+                            <Grid item xs={12} sm={12} md={6} data-aos="zoom-in">
                                 <Box sx={{marginTop: '-40px'}}>
                                 <Typography variant="h1" component="h2" sx={{fontSize: '30px', fontWeight: 400, color: '#fdfeff'}}>
                                     Red Onion Restaurant
@@ -130,13 +113,13 @@ const Blog = () => {
                     <Box sx={{marginTop: '80px'}}>
                         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} >
                             
-                            <Grid item xs={12} sm={12} md={6}  data-aos="fade-down-right" sx={{marginBottom: '40px'}}>
+                            <Grid item xs={12} sm={12} md={6}  data-aos="flip-down" sx={{marginBottom: '40px'}}>
                                 <Box sx={{textAlign: 'center', paddingTop: '40px'}}>
                                     <img style={{height: '200px', width: '350px'}} src={doctorImg} alt="" />
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
+                            <Grid item xs={12} sm={12} md={6} data-aos="zoom-in">
 
                                 <Box sx={{marginTop: '-40px'}}>
 

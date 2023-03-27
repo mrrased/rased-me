@@ -22,79 +22,34 @@ const About = () => {
     useEffect(()=>{
         AOS.init({duration: 1000})
     },[])
+    // data-aos="fade-down-right"
+    // data-aos="fade-left"
 
     return (
-        <div style={{backgroundColor: '#0a1012', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '20px', paddingRight: '20px'}} id="about" >
+        <div className='bg-[#0a1012] py-24 px-5' id="about" >
             <div className='about-bg'>
-                <h2 style={{
-                    color: '#151B2980',
-                    fontSize: '90px',
-                    textTransform: 'uppercase',
-                    marginTop: '0px',
-                    textAlign: 'center',
-
-                    }}
-                >About Me</h2>
-                
+                <h2 className='text-[#151B2980] text-[5.625rem] uppercase mt-0 text-center font-fontFamily'>About Me</h2>   
             </div>
             <div>
-                <h4 className='about-h4' style={{
-                    fontSize: '24px',
-                    fontWeight: 500,
-                    textTransform: 'uppercase',
-                    color: '#fec544',
-                    letterSpacing: '1px',
-                    marginTop: '-180px',
-                    textAlign: 'center'
-                }}>About Me</h4>
+                <h4 className='text-[#fec544] text-2xl uppercase font-base text-center -mt-[180px] font-fontFamily tracking-widest about-h4'>About Me</h4>
             </div>
-            <div style={{marginTop: '90px'}}>
+            <div className='mt-[10rem]'>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         
-                            <Grid item xs={12} sm={12} md={6} data-aos="fade-down-right">
-                                <img style={{width: '100%', height: '100%'}} src={img} alt="" />
+                            <Grid item xs={12} sm={12} md={5}data-aos="fade-down" >
+                                <div className='p-4 bg-gray-600 rounded-md'>
+                                    <img className='w-full h-full rounded-md' src={img} alt="" />
+                                </div>
                             </Grid>
 
-                            <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
-                                <h2 style={{
-                                    color: '#fdfeff',
-                                    fontSize: '36px',
-                                    fontWeight: 400,
-                                    marginBottom: '18px',
-                                    marginTop: '0px'
-
-                                }}>Hi! I'am Rashedur Rahman</h2>
-                                <h4 style={{
-                                    color: "#fec544",
-                                    fontSize: '24px',
-                                    fontWeight: 300,
-                                    marginBottom: '18px',
-                                    marginTop: '0px'
-
-                                }}>Junior Frontend Developer (MERN) </h4>
-                                <p style={{
-                                    color: '#a9adb8',
-                                    paddingLeft: '2px',
-                                    paddingRight: '2px',
-                                    fontSize: '15px',
-                                    fontWeight: 400,
-                                    marginBottom: '18px',
-                                    letterSpacing: '1px'
-                                    }}
-                                    >I'm passionate to work with new technologies. I wanna build my career with web       development. And i am optimistic about my bright developing career. I do many projects  with react, reactJs, NodeJs with Firebase. Some of my projects are shown here.
-                                </p>
+                            <Grid item xs={12} sm={12} md={7} data-aos="fade-down" >
+                                <h2 className='text-[#fdfeff] text-4xl font-normal mb-4 mt-0 font-fontFamily'>Hi! I'am Rashedur Rahman</h2>
+                                <h4 className='text-[#fec544] text-2xl font-normal mb-4 mt-0 font-fontFamily'>Junior Frontend Developer (MERN) </h4>
+                                <p className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>I'm passionate to work with new technologies. I wanna build my career with web       development. And i am optimistic about my bright developing career. I do many projects  with react, reactJs, NodeJs with Firebase. Some of my projects are shown here.</p>
                                 <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
-                                        <div style={{
-                                            color: '#a9adb8',
-                                            paddingLeft: '2px',
-                                            paddingRight: '2px',
-                                            fontSize: '14px',
-                                            fontWeight: 400,
-                                            marginBottom: '18px',
-                                            letterSpacing: '1px'
-                                        }}>
+                                        <div className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>
                                             <p>Birthday</p>
                                             <p>Phone</p>
                                             <p>Email</p>
@@ -103,14 +58,7 @@ const About = () => {
                                         </div>
                                     </Grid>
                                     <Grid item xs={10} sm={10} md={10}>
-                                        <div style={{
-                                            color: '#a9adb8',
-                                            paddingLeft: '2px',
-                                            paddingRight: '2px',
-                                            fontSize: '14px',
-                                            fontWeight: 400,
-                                            marginBottom: '18px',
-                                        }}>
+                                        <div className='text-[#a9adb8] text-base font-normal mb-12 mt-0 font-fontFamily px-0.5 ml-6'>
                                             <p>: Oct 27, 1996</p>
                                             <p>: +880-1732-920-164</p>
                                             <p>: rashedtechdr.786@gmai.com</p>
@@ -119,24 +67,9 @@ const About = () => {
                                         </div>
                                     </Grid>
                                 </Grid>
-                                <a style={{textDecoration: 'none'}} href="https://docs.google.com/document/d/19hgLgPYYYKBmQSbtWG9V4-Hfgtv51zdbut_4SO0o2A8/edit?usp=sharing" target="_blank" rel="noreferrer"> <Button sx={{
-                                    color: '#FEC544',
-                                    fontSize: '16px',
-                                    paddingTop: '12px',
-                                    paddingBottom: '12px',
-                                    paddingLeft: '24px',
-                                    paddingRight: '24px',
-                                    border: '1px solid #FEC544',
-                                    fontWeight: 500,
-                                    borderRadius: '50px',
-                                    textTransform: 'capitalize',
-                                    letterSpacing: '2px',
-                                    marginTop: '30px',
-                                    ':hover':{
-                                        backgroundColor: '#FEC544',
-                                        color: '#070D18',
-                                    }
-                                }}>Download CV</Button></a>
+                                <div className='flex justify-center lg:justify-start'>
+                                    <a className='no-underline text-[#FEC544] capitalize py-3 px-6 border border-[#FEC544] font-medium rounded-full hover:bg-[#FEC544] hover:text-[#070D18] text-base transition duration-700' href="https://docs.google.com/document/d/19hgLgPYYYKBmQSbtWG9V4-Hfgtv51zdbut_4SO0o2A8/edit?usp=sharing" target="_blank" rel="noreferrer">Download CV</a>
+                                </div>
                             </Grid>
                     </Grid>
                 </Box>

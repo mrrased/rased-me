@@ -58,7 +58,7 @@ const Contact = () => {
                     <Grid item xs={12} sm={12} md={6}>
                         <ContactForm />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} data-aos="fade-left">
+                    <Grid item xs={12} sm={12} md={6} data-aos="zoom-in">
                         <h3 style={{
                             color: '#FDFEFF',
                             fontSize: '30px',

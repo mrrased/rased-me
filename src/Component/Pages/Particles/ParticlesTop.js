@@ -1,105 +1,58 @@
-import React from 'react';
+import React, { useEffect, useRef }  from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import './Particles.css';
-// import ParticlesBackground from '../../../Config/ParticlesBackground';
-// import Particles  from "react-tsparticles";
-// import { loadFull } from "tsparticles";
+import ParticlesBackground from '../../../Config/ParticlesBackground';
+import Particles  from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const ParticlesTop = () => {
 
+    // const refParticles = useRef();
+
     // const particlesInit = async (main) => {
-    //     console.log(main);
+        // console.log(main);
     
-    //     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    //     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    //     // starting from v2 you can add only the features you need reducing the bundle size
-    //     await loadFull(main);
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        // await loadFull(main);
     // };
     
     // const particlesLoaded = (container) => {
-    // console.log(container);
+    // console.log(refParticles?.current.state);
     // };
+    // console.log(refParticles?.current);
+
+    
+    
 
     return (
         <div className='bg-img' id="home">
           
           <div className='position-banner'>
-                <div style={{textAlign: 'center' }}>
-                    <h1 style={{
-                        fontSize: '60px', 
-                        fontWeight: 600 , 
-                        marginTop: '0px',
-                        marginBottom: '10px'
-                        }}
-                        id="style"
-                        ><span 
-                        style={{color: '#fdfeff'}}>Hi,</span> 
-                        
-                        <span style={{color: '#fdfeff'}}> I am</span> 
-                        <span style={{color: '#FEC544'}}> Rashedur Rahman</span> 
+                <div className='text-center px-3 md:px-6 lg:px-10 xl:px-0'>
+                    <h1 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mt-0 mb-3' id="style">
+                        <span className='text-[#fdfeff]'>Hi,</span>
+                        <span className='text-[#fdfeff]'> I am</span> 
+                        <span className='text-[#FEC544]'> Rashedur Rahman</span> 
                     </h1>
-                    <p 
-                        style={{
-                            color: '#a4a8b4',
-                            fontFamily: 'sans-serif', 
-                            fontSize: '18px', 
-                            fontWeight: 300,
-                            marginBottom: '5px',
-                            marginTop: '5px'
-                            }}
-                            >I am a frontend web developer (MERN). I can provide clean code and pixel perfect design.</p>
-                    <p 
-                        style={{
-                            color: '#a4a8b4',
-                            fontFamily: 'sans-serif', 
-                            fontSize: '18px', 
-                            fontWeight: 300,
-                            marginTop: '5px'
-                            }}
-                        >I also make website more & more interactive with web animation.</p>
+                    <p className='text-lg font-normal mt-1.5 mb-1.5 font-fontFamily text-[#a4a8b4]'>I am a frontend web developer (MERN). I can provide clean code and pixel perfect design.</p>
+                    <p className='text-lg font-normal mt-1.5 font-fontFamily text-[#a4a8b4]'>I also make website more & more interactive with web animation.</p>
                     <div>
-                        <p>
-                            <span><a href="https://github.com/mrrased/" target="_blank" rel="noreferrer"><GitHubIcon 
-                                sx={{
-                                    border: '1px solid #202632',
-                                    borderRadius: '50%',
-                                    padding: '7px', 
-                                    fontSize: 40,
-                                    margin: '10px',
-                                    color: '#a4a8b4',
-                                    ':hover':{border: '2px solid white', cursor: 'pointer'}
-                                    }} 
-                                    /></a></span> 
-                            <span><a href="https://www.linkedin.com/in/rashedur-rahman-rony-4b72b8217/" target="_blank" rel="noreferrer"><LinkedInIcon 
-                                sx={{
-                                    border: '1px solid #202632',
-                                    borderRadius: '50%',
-                                    padding: '7px', 
-                                    fontSize: 40,
-                                    margin: '10px',
-                                    color: '#a4a8b4',
-                                    ':hover':{border: '2px solid white', cursor: 'pointer' }
-                                    }} 
-                                /></a></span> 
-                            <span><a href="https://www.facebook.com/rased.hd/" target="_blank" rel="noreferrer" ><FacebookRoundedIcon 
-                                sx={{
-                                    border: '1px solid #202632',
-                                    borderRadius: '50%',
-                                    padding: '7px', 
-                                    fontSize: 40,
-                                    margin: '10px',
-                                    color: '#a4a8b4',
-                                    ':hover':{border: '2px solid white', cursor: 'pointer'}
-                                    }} 
-                          /></a></span></p>
+                       <ul className='flex items-center justify-center'>
+                          <li><a href="https://github.com/mrrased/" target="_blank" rel="noreferrer"><GitHubIcon sx={{border: '1px solid #202632', borderRadius: '50%', padding: '7px', fontSize: 40, margin: '10px', color: '#a4a8b4', ':hover':{border: '2px solid white', cursor: 'pointer'}}}/></a></li>
+                          <li><a href="https://www.linkedin.com/in/rashedur-rahman-rony-4b72b8217/" target="_blank" rel="noreferrer"><LinkedInIcon sx={{border: '1px solid #202632', borderRadius: '50%', padding: '7px', fontSize: 40, margin: '10px', color: '#a4a8b4', ':hover':{border: '2px solid white', cursor: 'pointer'}}}/></a></li>
+                          <li><a href="https://www.facebook.com/rased.hd/" target="_blank" rel="noreferrer"><FacebookRoundedIcon sx={{border: '1px solid #202632', borderRadius: '50%', padding: '7px', fontSize: 40, margin: '10px', color: '#a4a8b4', ':hover':{border: '2px solid white', cursor: 'pointer'}}}/></a></li>
+                       </ul>
                     </div>
                 </div>
           </div>
             {/* <div>
           <Particles
-            
+            ref={refParticles}
+            className="canvasClassName"
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
@@ -113,6 +66,11 @@ const ParticlesTop = () => {
               },
               fpsLimit: 220,
               interactivity: {
+                  element:{
+                    outerHTML:{
+                      position: "static !important"
+                    }
+                  },
                   detect_on: "canvas",
                 events: {
                   onClick: {
@@ -153,7 +111,6 @@ const ParticlesTop = () => {
                 },
               },
               particles: {
-                
                 color: {
                   value: "#ffffff",
                 },
@@ -222,7 +179,10 @@ const ParticlesTop = () => {
               },
               detectRetina: true,
               }}
-          />
+              style={{position: 'static !important', backgroundColor: "red !important"}}
+          >
+            <canvas style={{position: 'static !important', backgroundColor: "red !important"}} />
+          </Particles>
           </div> */}
         </div>
         
