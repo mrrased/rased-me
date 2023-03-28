@@ -194,7 +194,7 @@ const FullPages = (props) => {
                     <About />
                     <Blog />
                     <Contact />
-                    {/* <Footer /> */}
+                    <Footer />
                 </Box>
             </Box>
         </div>

@@ -33,7 +33,7 @@ const About = () => {
             <div>
                 <h4 className='text-[#fec544] text-2xl uppercase font-base text-center -mt-[180px] font-fontFamily tracking-widest about-h4'>About Me</h4>
             </div>
-            <div className='mt-[10rem]'>
+            <div className='mt-[13rem]'>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         
@@ -46,7 +46,7 @@ const About = () => {
                             <Grid item xs={12} sm={12} md={7} data-aos="fade-down" >
                                 <h2 className='text-[#fdfeff] text-4xl font-normal mb-4 mt-0 font-fontFamily'>Hi! I'am Rashedur Rahman</h2>
                                 <h4 className='text-[#fec544] text-2xl font-normal mb-4 mt-0 font-fontFamily'>Junior Frontend Developer (MERN) </h4>
-                                <p className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>I'm passionate to work with new technologies. I wanna build my career with web       development. And i am optimistic about my bright developing career. I do many projects  with react, reactJs, NodeJs with Firebase. Some of my projects are shown here.</p>
+                                <p className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>I'm passionate to work with new technologies. I wanna build my career with web development. And i am optimistic about my bright developing career. I do many projects  with react, reactJs, NodeJs with Firebase. Some of my projects are shown here.</p>
                                 <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
                                         <div className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>
