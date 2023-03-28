@@ -3,27 +3,17 @@ import './About.css';
 import 'aos/dist/aos.css';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { Button } from '@mui/material';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import img from '../../../images/49175748_1981162115511152_3338332277926002688_n.jpg'
 
 
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(2),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
 
 const About = () => {
 
     useEffect(()=>{
         AOS.init({duration: 1000})
     },[])
-    // data-aos="fade-down-right"
-    // data-aos="fade-left"
 
     return (
         <div className='bg-[#0a1012] py-24 px-5' id="about" >
@@ -46,7 +36,7 @@ const About = () => {
                             <Grid item xs={12} sm={12} md={7} data-aos="fade-down" >
                                 <h2 className='text-[#fdfeff] text-4xl font-normal mb-4 mt-0 font-fontFamily'>Hi! I'am Rashedur Rahman</h2>
                                 <h4 className='text-[#fec544] text-2xl font-normal mb-4 mt-0 font-fontFamily'>Junior Frontend Developer (MERN) </h4>
-                                <p className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>I'm passionate to work with new technologies. I wanna build my career with web development. And i am optimistic about my bright developing career. I do many projects  with react, reactJs, NodeJs with Firebase. Some of my projects are shown here.</p>
+                                <p className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>I'm passionate to work with new technologies. I wanna build my career with web development. And i am optimistic about my bright developing career. I do many projects  with reactJs, NodeJs with Firebase. Some of my projects are shown here.</p>
                                 <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 12, sm: 12, md: 12 }}>
                                     <Grid item xs={2} sm={2} md={2}>
                                         <div className='text-[#a9adb8] text-base font-normal mb-4 mt-0 font-fontFamily px-0.5'>

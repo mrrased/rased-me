@@ -13,16 +13,6 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(2),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
-
-
-
 const Blog = () => {
 
     useEffect(()=>{
@@ -64,9 +54,8 @@ const Blog = () => {
                                 <Box sx={{color: '#a9adb8'}}>
                                     <ul className='mb-2'>
                                         <li>Has admin panel add or remove another admin</li>
-                                        <li>User can book Appointment & share experience</li>
-                                        <li>Everyone have to go through google authentication and can pay with strip</li>
-                                        
+                                        <li>User can order food & share experience</li>
+                                        <li>Everyone have to go through google authentication and can pay</li>
                                     </ul>
                                 </Box>
                                 
@@ -104,9 +93,7 @@ const Blog = () => {
                                                 transition: '.4s',
                                                 ':hover':{border: '1px solid #FEC544',  cursor: 'pointer'}
                                             }}
-                                                
                                     /></Tooltip></a></span></p>
-                                
                                 </Box>
                             </Grid>
                            
@@ -143,7 +130,6 @@ const Blog = () => {
                                             <li>Has admin panel add or remove another admin</li>
                                             <li>User can book Appointment & share experience</li>
                                             <li>Everyone have to go through google authentication and can pay with strip</li>
-                                            
                                         </ul>
                                     </Box>
 
@@ -159,29 +145,29 @@ const Blog = () => {
                                     </Box>
 
                                     <Box>
-                                    <p><span><a href="https://github.com/mrrased/doctors-portal-client" target="_blank" rel="noreferrer"><Tooltip TransitionComponent={Zoom} title="Github" arrow><GitHubIcon 
-                                                sx={{
-                                                    border: '1px solid #202632',
-                                                    borderRadius: '50%',
-                                                    padding: '7px', 
-                                                    fontSize: 40,
-                                                    margin: '10px',
-                                                    color: '#a4a8b4',
-                                                    transition: '.4s',
-                                                    ':hover':{border: '1px solid #FEC544',  cursor: 'pointer'}
-                                                    }} 
-                                                /></Tooltip></a></span><span><a href="https://doctors-portal-8f0a7.web.app/" target="_blank"  rel="noreferrer"><Tooltip TransitionComponent={Zoom} title="Live Site" arrow><VisibilityIcon 
-                                                sx={{
-                                                    border: '1px solid #202632',
-                                                    borderRadius: '50%',
-                                                    padding: '7px', 
-                                                    fontSize: '40px',
-                                                    margin: '10px',
-                                                    color: '#a4a8b4',
-                                                    transition: '.4s',
-                                                    ':hover':{border: '1px solid #FEC544',  cursor: 'pointer'}
-                                                    }} 
-                                                /></Tooltip></a></span></p>
+                                        <p><span><a href="https://github.com/mrrased/doctors-portal-client" target="_blank" rel="noreferrer"><Tooltip TransitionComponent={Zoom} title="Github" arrow><GitHubIcon 
+                                            sx={{
+                                                border: '1px solid #202632',
+                                                borderRadius: '50%',
+                                                padding: '7px', 
+                                                fontSize: 40,
+                                                margin: '10px',
+                                                color: '#a4a8b4',
+                                                transition: '.4s',
+                                                ':hover':{border: '1px solid #FEC544',  cursor: 'pointer'}
+                                                }} 
+                                            /></Tooltip></a></span><span><a href="https://doctors-portal-8f0a7.web.app/" target="_blank"  rel="noreferrer"><Tooltip TransitionComponent={Zoom} title="Live Site" arrow><VisibilityIcon 
+                                            sx={{
+                                                border: '1px solid #202632',
+                                                borderRadius: '50%',
+                                                padding: '7px', 
+                                                fontSize: '40px',
+                                                margin: '10px',
+                                                color: '#a4a8b4',
+                                                transition: '.4s',
+                                                ':hover':{border: '1px solid #FEC544',  cursor: 'pointer'}
+                                                }} 
+                                        /></Tooltip></a></span></p>
                                     </Box>
                                 </Box>
                             </Grid>

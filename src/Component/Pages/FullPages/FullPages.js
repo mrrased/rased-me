@@ -23,111 +23,56 @@ const drawerWidth = 282;
 
 const FullPages = (props) => {
 
-    // let activeStyle = {
-        
-    //     borderBottom: '4px solid crimson',
-    //     color: 'crimson',
-    //     fontWeight: 'bold'
-    // };
-
     const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-    //  const itemsList = [
-    //     {
-    //         text: "Home",
-    //         onClick:  () => console.log(<Link to='about'>working</Link>)
-
-    //     },
-    //     {
-    //         text: "About"
-    //     },
-    //     {
-    //         text: "Resume"
-    //     },
-    //     {
-    //         text: "Portfolio"
-    //     },
-    //     {
-    //         text: "Blog"
-    //     },
-    //     {
-    //         text: "Contact"
-    //     }
-    //  ]
-  const drawer = (
-    <div style={{backgroundColor: '#070d1b', color: '#fdfeff', paddingBottom: '80px'}}>
-      <Toolbar />
-        <Box sx={{textAlign: 'center', marginBottom: '40px'}}>
-            <Box>
-                <img src={img} alt="logo" style={{width: 178, height: 178 ,  borderRadius: '50%', border: '6px solid #202632'}} />
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+    const drawer = (
+        <div style={{backgroundColor: '#070d1b', color: '#fdfeff', paddingBottom: '80px'}}>
+        <Toolbar />
+            <Box sx={{textAlign: 'center', marginBottom: '40px'}}>
+                <Box>
+                    <img src={img} alt="logo" className='w-[6rem] h-[6rem] border-8 border-[#202632] rounded-full mx-auto'
+                    />
+                </Box>
             </Box>
-        </Box>
-      <Divider />
-      <List>
-      
-          <ListItem disablePadding>
-            {/* <ListItemButton> */}
-              <ListItemIcon>
-                {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-              </ListItemIcon>
-              {/* <ListItemText 
-              primary={text.text} 
-                    sx={{
-                    marginTop: '0px', 
-                    marginBottom: '0px', 
-                    fontSize: '15px', 
-                    fontWeight: 500,
-                    textTransform: 'uppercase'
-                }} 
-                /> */}
-                {/* <Link to="/home" spy={true} smooth={true} offset={50} duration={500} style={{marginTop: '0px', 
-                    marginBottom: '0px', 
-                    fontSize: '15px', 
-                    fontWeight: 500,
-                    textTransform: 'uppercase'}}>Home</Link> */}
-                    <ul style={{listStyleType: 'none'}} >
-                        <li className='li-st active'><Link 
-                        to="home" 
-                        spy={true} 
-                        smooth={true} 
-                        offset={50} 
-                        duration={700}
-                        >Home</Link></li>
-                        <li className='li-st'><Link to="about" spy={true} smooth={true} offset={50} duration={700} >About</Link></li>
-                        <li className='li-st'><Link to="blog" spy={true} smooth={true} offset={50} duration={700} >Blog</Link></li>
-                        <li className='li-st'><Link to="contact" spy={true} smooth={true} offset={50} duration={700} >Contact</Link></li>
-                    </ul>
-                    
-            {/* </ListItemButton> */}
-          </ListItem>
-          
-      </List>
-      <Box sx={{textAlign: 'center'}}>
-        <a style={{textDecoration: 'none'}} href="https://mail.google.com/" target="_blank" rel="noreferrer" >
-      <Button 
-        sx={{
-            paddingLeft: '40px', 
-            paddingRight: '40px', 
-            paddingTop: '8px', 
-            paddingBottom: '8px,', 
-            border: '1px solid #fec544',
-            borderRadius: '30px',
-            color: '#fec544',
-            fontWeight: 500,
-            textTransform: 'capitalize',
-            marginTop: '22px',
-            ':hover':{backgroundColor: '#fec544', color: 'black'}
-        }}
-        >Hire Me</Button></a>
-        </Box>
-    </div>
-  );
+        <Divider />
+        <List>
+            <ListItem disablePadding>
+                <ListItemIcon>
+                </ListItemIcon>
+                        <ul className='list-none' >
+                            <li className='li-st hover:text-[#fec544]'><Link to="home" spy={true} smooth={true} offset={50} duration={700}>Home</Link></li>
+                            <li className='li-st hover:text-[#fec544]'><Link to="about" spy={true} smooth={true} offset={50} duration={700} >About</Link></li>
+                            <li className='li-st hover:text-[#fec544]'><Link to="blog" spy={true} smooth={true} offset={50} duration={700} >Demo</Link></li>
+                            <li className='li-st hover:text-[#fec544]'><Link to="contact" spy={true} smooth={true} offset={50} duration={700} >Contact</Link></li>
+                        </ul>
+            </ListItem>
+        </List>
+        <Box sx={{textAlign: 'center'}}>
+            <a style={{textDecoration: 'none'}} href="https://mail.google.com/" target="_blank" rel="noreferrer" >
+        <Button 
+            sx={{
+                paddingLeft: '40px', 
+                paddingRight: '40px', 
+                paddingTop: '8px', 
+                paddingBottom: '8px,', 
+                border: '1px solid #fec544',
+                borderRadius: '30px',
+                color: '#fec544',
+                fontWeight: 500,
+                textTransform: 'capitalize',
+                marginTop: '22px',
+                ':hover':{backgroundColor: '#fec544', color: 'black'}
+            }}
+            >Hire Me</Button></a>
+            </Box>
+        </div>
+    );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+    const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
         <div>
@@ -160,14 +105,14 @@ const FullPages = (props) => {
                     aria-label="mailbox folders"
                 >
                     <Drawer
-                    container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
-                    }}
-                    sx={{
+                        container={container}
+                        variant="temporary"
+                        open={mobileOpen}
+                        onClose={handleDrawerToggle}
+                        ModalProps={{
+                            keepMounted: true, // Better open performance on mobile.
+                        }}
+                        sx={{
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
@@ -189,7 +134,6 @@ const FullPages = (props) => {
                     component="main"
                     sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } , paddingTop: '50px', paddingBottom: '0px'}}
                 >
-                    {/* <Toolbar sx={{paddingBottom: '0px'}} /> */}
                     <ParticlesTop />
                     <About />
                     <Blog />
@@ -201,10 +145,6 @@ const FullPages = (props) => {
     );
 };
 FullPages.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
   };
 export default FullPages;
